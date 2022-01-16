@@ -1,13 +1,18 @@
 import styled from 'styled-components'
 import {FaBars} from 'react-icons/fa'
+import {IoLogoGameControllerB} from 'react-icons/io'
 
 export const Nav = styled.nav`
     background: #000;
     height: 80px;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     padding: 0.5rem calc((100vw - 1000px) / 2);
     z-index: 10;
+
+    /* 3rd Nav  */
+
+    justify-content: flex-start;
 `
 
 export const NavLink = styled.li`
@@ -21,6 +26,7 @@ export const NavLink = styled.li`
     align-items: center;
     text-decoration: none;
     padding: 0 1rem;
+    height: 100%;
     cursor: pointer;
     }
 
@@ -49,11 +55,24 @@ export const Bars = styled(FaBars)`
     }
 `
 
+export const Game = styled(IoLogoGameControllerB)`
+    color: #256ce1;
+    font-size: 3.5rem;
+`
+
 export const NavMenu = styled.ul`
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-right: -24px;
+
+    /* 2rd Nav */
+    /* margin-right: 24px */
+
+    /* 3rd Nav */
+        width: 100vw; 
+        white-space: nowrap;
+    
+
     @media screen and (max-width: 768px) {
         display: none;
     }
@@ -63,6 +82,11 @@ export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
     margin-right: 24px;
+
+    /* 3rd nav */
+        justify-content: flex-end;
+        width: 100vw;
+
 
         a{
         border-radius: 4px;
@@ -74,6 +98,9 @@ export const NavBtn = styled.nav`
         cursor: pointer;
         transition: all 0.2s ease-in-out;
         text-decoration: none; 
+
+
+        /*margin-left: 24px;*/
     }
 
         a:hover{

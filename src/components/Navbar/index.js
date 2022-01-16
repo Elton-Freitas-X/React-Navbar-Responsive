@@ -1,5 +1,5 @@
 import React from 'react'
-import {Nav, NavLink, Bars, NavMenu, NavBtn} from './NavbarElements'
+import {Nav, NavLink, Bars, NavMenu, NavBtn, Game} from './NavbarElements'
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
@@ -7,7 +7,7 @@ export default function Navbar() {
         <>
             <Nav>
                 <NavLink>
-                   <Link to="/">Logo</Link>
+                   <Link to="/"><Game/></Link>
                 </NavLink>
                 <Bars />
                 <NavMenu>
@@ -23,10 +23,13 @@ export default function Navbar() {
                    <NavLink>
                         <Link to="/sign-up">Sign Up</Link>
                    </NavLink>
-                </NavMenu>
-                <NavBtn>
+                   {/*<NavBtn>
                     <Link to="/sign-in">Sign In</Link>
-                </NavBtn>
+                    </NavBtn>*/}
+                </NavMenu>
+                    <NavBtn>
+                    <Link to="/sign-in">Sign In</Link>
+                    </NavBtn>
             </Nav>
         </>
     )
